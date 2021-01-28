@@ -1,51 +1,19 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.*;
 
 public class FenetrePrincipale extends JFrame implements ActionListener {
 
-    JButton creerClient = new JButton("Nouveau Restaurant");
-    JButton InfoClient = new JButton("Information Restaurant");
-    JButton ProduitClient = new JButton("Produits Périmés");
+    JButton creerClient = new JButton("Ajouter des articles");
+    JButton InfoClient = new JButton("Information Supermarché");
+    JButton ProduitClient = new JButton("Commande");
     JButton Calculatrice = new JButton("Calculatrice");
     JLabel DateTime = new JLabel("Date");
 
 
     public FenetrePrincipale() {
 
-        //______________J'ai essayé de changé le background mais je n'est pas réussie-------------//
-
-        //JFrame frame = new JFrame("Afficher une image en arrière-plan");
-
-        //final ImageIcon icon = new ImageIcon("background4K.jpg");
-        //JTextArea text = new JTextArea()
-        //{
-        //    Image img = icon.getImage();
-        //    // initialiseur d'instance
-        //    {setOpaque(false);}
-        //    public void paintComponent(Graphics graphics)
-        //    {
-        //        graphics.drawImage(img, 0, 0, this);
-        //        super.paintComponent(graphics);
-        //    }
-        //};
-
-        // JScrollPane pane = new JScrollPane(text);
-        // Container content = frame.getContentPane();
-        // content.add(pane, BorderLayout.CENTER);
-        // setDefaultCloseOperation(3);
-        //frame.setSize(400, 300);
-        //frame.setVisible(true);
-
-
-        //JLabel background;
-        // ImageIcon img = new ImageIcon("background4K.jpg");
-        // background = new JLabel("",JLabel.CENTER);
-        // background.setBounds(0,0,1000,1000);
-        // add(background);
-
-
-        //_________________________________________________________________________________________//
 
 
         //Affichage de la fenêtre//
@@ -62,7 +30,7 @@ public class FenetrePrincipale extends JFrame implements ActionListener {
 
         //Affichage de l'image dans l'accueil//
 
-        String imgUrl = "javalogo.jpg";
+        String imgUrl = "kebabicon.jpg";
         ImageIcon icone = new ImageIcon(imgUrl);
         JLabel label = new JLabel(icone, JLabel.CENTER);
         label.setIcon(icone);
@@ -79,16 +47,35 @@ public class FenetrePrincipale extends JFrame implements ActionListener {
 
         JPanel p = new JPanel();
 
+        //--Ajouts des boutons pour l'interception des actions de l'utilisateur--//
 
+        //Bouton Pour la création d'un nouveau client
+        creerClient.addActionListener(this);
+        p.add(creerClient);
+
+        //Bouton Pour l'affichage des infos du clients
+        InfoClient.addActionListener(this);
+        p.add(InfoClient);
+
+        //Bouton Affichage des produits pour passer une commande
+        ProduitClient.addActionListener(this);
+        p.add(ProduitClient);
+
+        //Bouton Affichage de la calculatrice
+        Calculatrice.addActionListener(this);
+        p.add(Calculatrice);
 
 
         return p;
     }
 
 
+
     @Override
     public void actionPerformed(ActionEvent e) {
 
+        //--Traitements des actions de l'utilisateurs--//
 
+        //création d'un nouveau client
     }
 }
