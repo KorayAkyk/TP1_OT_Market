@@ -13,6 +13,7 @@ public class Calculatrice {
     JFrame f;
     ImageIcon i;
     Image e;
+    //JLABEL TEST
     //Declaration des variables, Variable Declaration
 
 
