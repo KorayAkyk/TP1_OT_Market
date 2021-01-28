@@ -77,6 +77,12 @@ public class FenetrePrincipale extends JFrame implements ActionListener {
         //--Traitements des actions de l'utilisateurs--//
 
         //création d'un nouveau client
+        //Affichage de la calculatrice
+        if (e.getSource().equals(Calculatrice)) {
+            System.out.println("Calculatrice");
+            Calculatrice fnc = new Calculatrice();
+
+        }
 
     }
 }
