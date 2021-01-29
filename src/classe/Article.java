@@ -1,3 +1,5 @@
+package classe;
+
 public class Article {
 	
 	//Attributs
