@@ -37,6 +37,7 @@ public class Article {
 	
 	public int getQuantiteEnStock() {
 		return quantiteEnStock;
+		//ajout test
 	}
 	
 	public void approvisionner(int nombreUnites) {
