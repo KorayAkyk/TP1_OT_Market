@@ -21,7 +21,7 @@ public class Article {
 		this.prixHT = prixHT;
 		this.quantiteEnStock = quantiteEnStock;
 	}
-	
+	//
 	//Methodes
 	public long getReference() {
 		return reference;
