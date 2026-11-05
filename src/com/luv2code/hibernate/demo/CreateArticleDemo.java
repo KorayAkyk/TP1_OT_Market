@@ -12,6 +12,8 @@ public class CreateArticleDemo {
 		// Create session factory 
 		SessionFactory factory = new Configuration()
 								.configure("hibernate.cfg.xml")
+								.setProperty("hibernate.connection.username", System.getenv("DB_USER") == null ? "" : System.getenv("DB_USER"))
+								.setProperty("hibernate.connection.password", System.getenv("DB_PASSWORD") == null ? "" : System.getenv("DB_PASSWORD"))
 								.addAnnotatedClass(Article.class)
 								.buildSessionFactory();
 		// Create session

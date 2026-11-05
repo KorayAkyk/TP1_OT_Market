@@ -15,7 +15,7 @@ Java, Swing, Hibernate 5.4, pilote MySQL (MySQL Connector/J 8). Les bibliothèqu
 
 ## Ce qu'il faut
 
-Un JDK, un IDE (IntelliJ IDEA ou Eclipse) et un serveur MySQL. Les paramètres de connexion se règlent dans `src/com/luv2code/jdbc/hibernate.cfg.xml` et dans `TestJdbc.java`.
+Un JDK, un IDE (IntelliJ IDEA ou Eclipse) et un serveur MySQL. L'adresse de la base se règle dans `src/com/luv2code/jdbc/hibernate.cfg.xml` et dans `TestJdbc.java`. L'identifiant et le mot de passe se règlent avec les variables d'environnement `DB_USER` et `DB_PASSWORD`.
 
 ## Lancer
 

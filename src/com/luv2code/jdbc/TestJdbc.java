@@ -8,8 +8,8 @@ public class TestJdbc {
 	public static void main(String[] args) {
 		
 		String jdbcUrl = "jdbc:mysql://localhost:3306/magasin?useSSL=false";
-		String user = "magasin";
-		String pass = "magasin";
+		String user = System.getenv("DB_USER") == null ? "" : System.getenv("DB_USER");
+		String pass = System.getenv("DB_PASSWORD") == null ? "" : System.getenv("DB_PASSWORD");
 		
 		try
 		{
